@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeleteMe - Web Version</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DeleteMe</h1>
+        <p id="status">Loading AI models... (this may take a few seconds)</p>
+        
+        <div class="controls">
+            <button id="captureBtn" disabled>Capture Background</button>
+            <button id="startBtn" disabled>Start App</button>
+            <label>
+                <input type="checkbox" id="drawBbox" checked> Draw Person Bounding Box
+            </label>
+        </div>
+
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output_canvas"></canvas>
+            <p id="countdown" class="overlay-text hidden"></p>
+        </div>
+    </div>
+
+    <!-- Import MediaPipe via CDN and load our script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
